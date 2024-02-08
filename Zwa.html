@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('foto/bg.jpg') no-repeat center center fixed; /* Ganti link dengan URL gambar JPG yang Anda inginkan */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Ubah warna latar belakang menjadi hitam transparan */
+            border-radius: 10px;
+            animation: slideIn 1s forwards;
+            color: white; /* Ubah warna teks menjadi putih */
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: #007bff; /* Ubah warna tombol menjadi biru */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Ubah warna latar belakang tombol saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Berikut ini merupakan apk untuk memainkan Gtps Family Topia:</p>
+        <div class="button-container">
+            <div class="button" onclick="window.location.href = 'https://www.mediafire.com/file/e6g82ppcpgqpijs/com.github.xfalcon.vhosts_42.apk/file';">Vhost</div>
+            <div class="button" onclick="window.location.href = 'https://www.mediafire.com/file/kn90s3e8rdbzspb/Hosts_Go_2.1.9_apkcombo.com.apk/file';">HostGo</div>
+            <div class="button" onclick="window.location.href = 'https://www.mediafire.com/file/zak1eaqpk7mia2j/ptunnel.apk/file';">Ptunnel</div>
+        </div>
+    </div>
+</body>
+</html>

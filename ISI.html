@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('foto/bg.jpg') no-repeat center center fixed; /* Ganti link dengan URL gambar JPG yang Anda inginkan */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: slide-in 1s ease forwards;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            text-align: left;
+            margin-left: 20px; /* Tambahkan margin kiri di sini */
+            margin-right: auto;
+            max-width: 80%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* CSS untuk tombol */
+        .button-container {
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: #007bff; /* Warna biru untuk latar belakang tombol */
+            color: #ffffff; /* Warna putih untuk teks tombol */
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
+
+        /* Efek hover pada tombol */
+        .button:hover {
+            background-color: #0056b3; /* Warna biru yang sedikit lebih gelap saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>☆《 Familly • Topia 》☆</h1>
+        <img src="foto/isifoto.jpg" alt="Gambar Anda">
+        <div class="content">
+            <p>♤{••WELCOME TO Familly • Topia••}♤<br>
+              Owner Server: ZursGt<br>
+              Co Owner: Zeniths<br>
+              Helper: -<br>
+              Designer: -<br>
+              Web: NanaXD<br>
+              Coder: {Private}<br><br>
+
+              RULES UNLI‼️<br>
+              * Dilarang Bermain Csn [Warn 1x]<br>
+              * Dilarang Membuat Second Account[Banip]<br>
+              * Dilarang memberi item sembarangan<br>
+              * Dilarang Mengambil World Orang Lain<br>
+              * Membantu Menstabilkan Server<br>
+              * Membantu Player Yang terkena scam<br>
+            </p>
+        </div>
+        <!-- Tombol-tombol -->
+        <div class="button-container">
+            <a href="Zwa.html" class="button">Apk</a>
+            <a href="admin.html" class="button">Admin</a>
+            <a href="Role.html" class="button">Role</a>
+           <a href="list.html" class="button">ListMod</a>
+        </div>
+        <!-- Ganti "apk_page.html", "admin_page.html", dan "role_page.html" dengan lokasi file yang sesuai -->
+    </div>
+</body>
+</html>

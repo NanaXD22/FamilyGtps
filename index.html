@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('foto/bg.jpg') no-repeat center center fixed; /* Ganti link dengan URL gambar JPG yang Anda inginkan */
+            background-size: cover;
+            overflow: hidden; /* Mengatur overflow ke hidden agar tidak muncul scrollbar */
+        }
+
+        .intro-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8); /* Menggunakan transform scale untuk memberikan efek lebih smooth */
+            text-align: center;
+            font-family: 'Open Sans', sans-serif; /* Menggunakan font Open Sans */
+            z-index: 1; /* Menempatkan teks di atas gambar */
+        }
+
+        .blink-text {
+            animation: blink 1s infinite alternate; /* Animasi berkedip */
+        }
+
+        @keyframes blink {
+            0% {
+                color: white; /* Warna putih */
+            }
+            100% {
+                color: black; /* Warna hitam */
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: calc(50% - 300px); /* Atur posisi vertikal gambar (diubah dari -250px menjadi -300px) */
+            left: calc(50% - 75px); /* Atur posisi horizontal gambar */
+            z-index: 0; /* Menempatkan gambar di bawah teks */
+            width: 150px; /* Menyesuaikan lebar logo */
+            height: 150px; /* Menyesuaikan tinggi logo */
+            border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+            animation: blink-logo 10s linear infinite; /* Animasi berkedip */
+        }
+
+        @keyframes blink-logo {
+            0%, 100% {
+                content: url('foto/logo.jpeg'); /* Gambar awal */
+            }
+            50% {
+                content: url('foto/logo2.jpg'); /* Gambar kedua */
+            }
+        }
+
+        .btn-lanjut {
+            background-color: #007bff; /* Warna latar belakang tombol */
+            color: #fff; /* Warna teks tombol */
+            border: none; /* Tanpa border */
+            padding: 15px 30px; /* Padding yang lebih besar */
+            font-size: 1.2em; /* Ukuran font yang lebih besar */
+            cursor: pointer; /* Kursor tangan saat hover */
+            border-radius: 20px; /* Bentuk sedikit oval */
+            transition: background-color 0.3s ease; /* Transisi warna latar belakang */
+        }
+
+        .btn-lanjut:hover {
+            background-color: #0056b3; /* Warna latar belakang saat hover */
+        }
+    </style>
+</head>
+<body>
+    <img src="foto/logo1.jpeg" alt="Logo" class="logo"> <!-- Ganti 'foto/logo1.jpeg' dengan URL atau path ke gambar pertama Anda -->
+    <div class="intro-text">
+        <h1 class="blink-text" style="font-size: 3em;">《 Familly • Topia 》</h1>
+        <p class="blink-text" style="font-size: 1.5em;">Family Topia merupakan Growtopia Private Server atau yang kita singkat yaitu Gtps.ini adalah server fresh atau masih baru jadi havefun aja.</p>
+        <button class="btn-lanjut" onclick="lanjut()">Lanjut</button> <!-- Tombol Lanjut -->
+    </div>
+    <script>
+        function lanjut() {
+            // Fungsi yang akan dipanggil saat tombol Lanjut ditekan
+            window.location.href = 'ISI.html'; // Ganti 'halaman_selanjutnya.html' dengan nama file halaman selanjutnya
+        }
+    </script>
+</body>
+</html>

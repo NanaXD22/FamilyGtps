@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('foto/bg.jpg') no-repeat center center fixed; /* Ganti link dengan URL gambar JPG yang Anda inginkan */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.5); /* Hitam dengan tingkat transparansi 50% */
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            animation: slide-in 0.5s ease-out forwards; /* Menambahkan animasi slide in */
+            opacity: 0;
+            color: white; /* Ubah warna teks menjadi putih */
+        }
+
+        .contact {
+            margin-bottom: 20px; /* Jarak antara kontak */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact img {
+            width: 80px; /* Mengurangi ukuran gambar */
+            height: 80px; /* Mengurangi ukuran gambar */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .contact h3 {
+            margin: 0;
+        }
+
+        .contact p {
+            margin: 0;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="contact">
+            <img src="admin/owner.jpg" alt="OWNER">
+            <h3>ZursGt</h3>
+            <p>Dialah pemilik server ini jadi ketika anda tertarik untuk membeli role atau lapor bug silahkan ke Whatsapp Owner</p>
+            <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/6285711344703'">Chat Owner</button>
+        </div>
+
+        <div class="contact">
+            <img src="admin/coown.jpg" alt="CoOwner">
+            <h3>Zeniths</h3>
+            <p>Dialah Adalah Coowner jika Owner utama tidak aktif atau sibuk bisa menghubungi Coowner</p>
+            <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/628811057677'">Chat Coown</button>
+        </div>
+
+        <div class="contact">
+            <img src="admin/web.jpg" alt="WEb">
+            <h3>NanaXD</h3>
+            <p>Dialah adalah pembuat Website ini jika mereka berdua tidak aktif bisa menghubungi kontak ini</p>
+            <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/62895350601070'">Chat WEB</button>
+        </div>
+    </div>
+</body>
+</html>
