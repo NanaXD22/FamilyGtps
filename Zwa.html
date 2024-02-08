@@ -44,18 +44,22 @@
             display: inline-block;
             padding: 10px 20px;
             border-radius: 30px;
-            background-color: #007bff; /* Ubah warna tombol menjadi biru */
+            background-color: rgba(144, 238, 144, 0.7); /* Warna hijau muda transparan */
             color: white;
             text-align: center;
             text-decoration: none;
             font-size: 16px;
             margin: 0 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .button:hover {
-            background-color: #0056b3; /* Ubah warna latar belakang tombol saat dihover */
+            background-color: rgba(144, 238, 144, 1); /* Warna latar belakang tombol saat dihover */
+        }
+
+        .button:active {
+            transform: scale(0.95); /* Efek scaling ketika tombol ditekan */
         }
     </style>
 </head>

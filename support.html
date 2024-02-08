@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('foto/bg.jpg') no-repeat center center fixed; /* Template by RendyX  */
+            background-size: cover;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Warna hitam transparan */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            color: white; /* Warna teks putih */
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.3); /* Warna putih transparan */
+            color: white; /* Warna teks putih */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Admin</h2>
+        <form action="" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+    <?php
+    if(isset($_POST['submit'])){
+        $to = "NanaNomi222@gmail.com"; // Ganti dengan email admin yang sebenarnya
+        $from = $_POST['email'];
+        $name = $_POST['name'];
+        $subject = "New Message from $name";
+        $message = $_POST['message'];
+        $headers = "From:" . $from;
+        mail($to,$subject,$message,$headers);
+    }
+    ?>
+</body>
+</html>

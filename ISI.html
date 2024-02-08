@@ -56,22 +56,34 @@
         /* CSS untuk tombol */
         .button-container {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        
+
         .button {
             display: inline-block;
             padding: 10px 20px;
             border-radius: 30px;
-            background-color: #007bff; /* Warna biru untuk latar belakang tombol */
-            color: #ffffff; /* Warna putih untuk teks tombol */
-            margin: 0 10px;
+            background-color: rgba(144, 238, 144, 0.5); /* Warna hijau muda transparan */
+            border: 2px solid rgba(144, 238, 144, 0.8); /* Garis tepi berwarna hijau muda dengan kejelasan yang lebih tinggi */
+            color: white; /* Warna teks tetap putih */
+            margin: 0 10px 10px 10px; /* Mengatur margin pada tombol */
             transition: background-color 0.3s, color 0.3s;
             text-decoration: none;
+            width: 150px; /* Tetapkan lebar tetap untuk tombol */
+            text-align: center; /* Tengahkan teks di dalam tombol */
         }
 
         /* Efek hover pada tombol */
         .button:hover {
-            background-color: #0056b3; /* Warna biru yang sedikit lebih gelap saat dihover */
+            background-color: rgba(144, 238, 144, 0.8); /* Warna hijau muda lebih terang saat dihover */
+        }
+
+        /* Efek ketika tombol ditekan */
+        .button:active {
+            transform: translateY(2px);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -94,7 +106,8 @@
               * Dilarang memberi item sembarangan<br>
               * Dilarang Mengambil World Orang Lain<br>
               * Membantu Menstabilkan Server<br>
-              * Membantu Player Yang terkena scam<br>
+              * Membantu Player Yang terkena scam<br><br>
+              Special Thanks to RendyX yang telah membantu Admin<br>
             </p>
         </div>
         <!-- Tombol-tombol -->
@@ -102,7 +115,10 @@
             <a href="Zwa.html" class="button">Apk</a>
             <a href="admin.html" class="button">Admin</a>
             <a href="Role.html" class="button">Role</a>
-           <a href="list.html" class="button">ListMod</a>
+            <a href="list.html" class="button">ListMod</a>
+            <a href="sp.html" class="button">Thanks</a>
+            <a href="support.html" class="button">Contact</a>
+            <a href="donate.html" class="button">Donate</a>
         </div>
         <!-- Ganti "apk_page.html", "admin_page.html", dan "role_page.html" dengan lokasi file yang sesuai -->
     </div>

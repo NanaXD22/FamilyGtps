@@ -36,7 +36,7 @@
 
         .logo {
             position: absolute;
-            top: calc(50% - 300px); /* Atur posisi vertikal gambar (diubah dari -250px menjadi -300px) */
+            top: calc(50% - 400px); /* Atur posisi vertikal gambar */
             left: calc(50% - 75px); /* Atur posisi horizontal gambar */
             z-index: 0; /* Menempatkan gambar di bawah teks */
             width: 150px; /* Menyesuaikan lebar logo */
@@ -47,7 +47,7 @@
 
         @keyframes blink-logo {
             0%, 100% {
-                content: url('foto/logo.jpeg'); /* Gambar awal */
+                content: url('foto/logo1.jpeg'); /* Gambar awal */
             }
             50% {
                 content: url('foto/logo2.jpg'); /* Gambar kedua */
@@ -56,7 +56,7 @@
 
         .btn-lanjut {
             background-color: #007bff; /* Warna latar belakang tombol */
-            color: #fff; /* Warna teks tombol */
+            color: white; /* Warna teks tombol (putih) */
             border: none; /* Tanpa border */
             padding: 15px 30px; /* Padding yang lebih besar */
             font-size: 1.2em; /* Ukuran font yang lebih besar */
@@ -68,6 +68,41 @@
         .btn-lanjut:hover {
             background-color: #0056b3; /* Warna latar belakang saat hover */
         }
+
+        /* Style untuk kotak pemutar musik */
+        .music-player {
+            background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang transparan hitam */
+            color: white; /* Warna teks tetap putih */
+            border-radius: 20px; /* Bentuk sedikit oval */
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Bayangan */
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /* Style untuk box quotes */
+        .quotes {
+            background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang transparan hitam */
+            border-radius: 20px; /* Bentuk sedikit oval */
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Bayangan */
+        }
+
+        .quote-text {
+            color: white; /* Warna teks tetap putih */
+            font-size: 1.2em; /* Ukuran font */
+            font-style: italic; /* Gaya font italic */
+        }
+
+        .quote-author {
+            color: white; /* Warna teks tetap putih */
+            font-size: 1.2em; /* Ukuran font */
+            font-style: italic; /* Gaya font italic */
+        }
     </style>
 </head>
 <body>
@@ -76,12 +111,36 @@
         <h1 class="blink-text" style="font-size: 3em;">《 Familly • Topia 》</h1>
         <p class="blink-text" style="font-size: 1.5em;">Family Topia merupakan Growtopia Private Server atau yang kita singkat yaitu Gtps.ini adalah server fresh atau masih baru jadi havefun aja.</p>
         <button class="btn-lanjut" onclick="lanjut()">Lanjut</button> <!-- Tombol Lanjut -->
+        <br><br>
+        <div class="music-player">
+            <audio controls>
+                <source src="music/music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="quotes">
+            <p class="quote-text" id="quote">"Sejauh mana dia merubah mu? cukup jauh :)." - RendyX</p>
+   
+        </div>
     </div>
     <script>
-        function lanjut() {
-            // Fungsi yang akan dipanggil saat tombol Lanjut ditekan
-            window.location.href = 'ISI.html'; // Ganti 'halaman_selanjutnya.html' dengan nama file halaman selanjutnya
+        // Array quotes yang akan diganti setiap 5 detik
+        var quotes = [
+            '"Sejauh mana dia merubah mu? cukup jauh :)." - RendyX',
+            '"Aku tidak merubahmu tapi hanya menemani dan membantu masalah mu ^_^." - theona'
+        ];
+
+        var index = 0;
+        var quoteElement = document.getElementById('quote');
+
+        function changeQuote() {
+            // Mengubah kutipan ke kutipan berikutnya dalam array
+            quoteElement.textContent = quotes[index];
+            index = (index + 1) % quotes.length;
         }
+
+        // Panggil fungsi changeQuote setiap 5 detik
+        setInterval(changeQuote, 5000);
     </script>
 </body>
 </html>
