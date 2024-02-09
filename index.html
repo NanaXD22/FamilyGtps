@@ -22,14 +22,14 @@
         }
 
         .blink-text {
-            animation: blink 1s infinite alternate; /* Animasi berkedip */
+            animation: blink 4s infinite alternate; /* Animasi berkedip */
         }
 
         @keyframes blink {
-            0% {
+            100% {
                 color: white; /* Warna putih */
             }
-            100% {
+            0% {
                 color: black; /* Warna hitam */
             }
         }
@@ -106,7 +106,7 @@
     </style>
 </head>
 <body>
-    <img src="foto/logo1.jpeg" alt="Logo" class="logo"> <!-- Ganti 'foto/logo1.jpeg' dengan URL atau path ke gambar pertama Anda -->
+    <img src="foto/logo.jpeg" alt="Logo" class="logo"> <!-- Ganti 'foto/logo1.jpeg' dengan URL atau path ke gambar pertama Anda -->
     <div class="intro-text">
         <h1 class="blink-text" style="font-size: 3em;">《 Familly • Topia 》</h1>
         <p class="blink-text" style="font-size: 1.5em;">Family Topia merupakan Growtopia Private Server atau yang kita singkat yaitu Gtps.ini adalah server fresh atau masih baru jadi havefun aja.</p>
@@ -119,15 +119,25 @@
             </audio>
         </div>
         <div class="quotes">
-            <p class="quote-text" id="quote">"Sejauh mana dia merubah mu? cukup jauh :)." - RendyX</p>
-   
+            <p class="quote-text" id="quote">"Dari lagu ini kita sadar bahwa sadar diri lebih utama." Tunggu 5 detik</p>
         </div>
     </div>
     <script>
         // Array quotes yang akan diganti setiap 5 detik
         var quotes = [
-            '"Sejauh mana dia merubah mu? cukup jauh :)." - RendyX',
-            '"Aku tidak merubah mu tapi kamu lah yang merubah dirimu sendiri ^_^." - theona'
+          '"Tugasku hanyalah menjagamu sementara,jika kelak engkau bertemu dengan pangeranmu,berarti tugasku sebagai ksatria telah selesai :)." - RendyX (Rteam)',
+          '"bukan dia yng menghancurkan perasaan ku,tapi aku yang terlalu berharap." - Dani (Rteam)',
+          '"engkau melukai ku dengan pisau,tetapi aku harus meminta maaf dikarenakan darah ku mengenai gaun mu yg indah." - Dean (Rteam)',
+          '"Jika sudah tidak ada bahu untuk bersandar masih ada batagor untuk di dahar." - Maz Dzaki',
+          '"Terima kasih karna sudah membuat hari-hari ku lebih indah walaupun itu sesaat :)." - Bay (Rteam)',
+          '"Hujan sudah reda, tugasku sebagai payungmu sudah selesai, sekarang berbahagialah bersama pelangi mu." - Farel',
+          '"Senyumannya sangat berharga sehingga aku mengorbankan semuanya untuk melihatnya terus tersenyum termasuklah mengorbankan kebahagiaan diriku sendiri." - Pratama',
+          '"Aku pasrah bukan berarti menyerah tapi membiarkan mu bahagia dengan pilihan mu." - Angga',
+          '"Pantas banyak yang tidak menyukai kesendirian, sebab dalam kesendirian itu ada aku." - Akbar (Rteam)',
+          '"Terlalu banyak ku berharap padamu,Sampai aku lupa siapa yg ada di hati mu." - Raditya (Rteam)',
+          '"aku memang terlihat tak peduli denganmu, tetapi aku selalu memperhatikan apa yang kamu lakukan." - Zuan',
+          '"pada akhirnya,nanti yang menentukan dirimu bahagia atau sedih adalah diri sendiri." - Raffi',
+          '"selamat berkelana nona, senang bertemu manusia sepertimu." - Andra'
         ];
 
         var index = 0;
@@ -140,11 +150,12 @@
         }
 
         // Panggil fungsi changeQuote setiap 5 detik
-        setInterval(changeQuote, 5000);
+        setInterval(changeQuote, 9000);
 
-        // Fungsi untuk mengarahkan ke halaman ISI.html
+        // Fungsi untuk lanjutkan ke halaman berikutnya
         function lanjut() {
-            window.location.href = "ISI.html";
+            // Mengarahkan ke halaman ISI.html
+            window.location.href = 'ISI.html';
         }
     </script>
 </body>
